@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Register">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageViewLogoRegister"
+                    android:layout_width="@dimen/width_img"
+                    android:layout_height="@dimen/height_img"
+                    android:alpha="0.5"
+                    android:src="@drawable/bg_avatar" />
+
+                <TextView
+                    android:id="@+id/textViewAvatarRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Ảnh đại diện"
+                    android:textColor="@color/black" />
+
+            </FrameLayout>
+
+
+            <EditText
+                android:id="@+id/editTextPhoneRegister"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_input"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/bg_input"
+                android:ems="10"
+                android:hint="Số điện thoại"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewWarningPhoneRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/warning_input"
+                android:textSize="13sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_input"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp">
+
+                <EditText
+                    android:id="@+id/editTextPasswordRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_input"
+                    android:ems="10"
+                    android:hint="Mật khẩu"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/imageViewCancelShowPasswordRegister"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginRight="10dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/cancel_show_password" />
+
+                <ImageView
+                    android:id="@+id/imageViewShowPasswordRegister"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/show_password" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textViewWarningPasswordRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/warning_input"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/editTextRepassRegister"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_input"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/bg_input"
+                android:ems="10"
+                android:hint="Họ và tên"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewWarningFullnameRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/warning_input"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/editTextDobRegister"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_input"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/bg_input"
+                android:focusable="false"
+                android:hint="Ngày sinh"
+                android:inputType="none"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textViewWarningDobRegster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/warning_input"
+                android:textSize="13sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp">
+
+                <Button
+                    android:id="@+id/buttonRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_button"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarRegister"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="40dp">
+
+                <TextView
+                    android:id="@+id/textViewAsk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Bạn đã có tài khoản?"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text=" Đăng nhập"
+                    android:textColor="#3C8FD1"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
